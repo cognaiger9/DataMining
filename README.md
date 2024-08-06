@@ -1,64 +1,57 @@
-How to run
-```
-pip install virtualenv
-python3 -m venv env
-source env/bin/activate
-pip install -r requirements.txt
-```
+# Telco Customer Churn Prediction
 
-# Git Workflow Tutorial
+## Project Overview
 
-This tutorial will guide you through the process of contributing to our project using Git. We'll cover how to checkout from the main branch, commit to your own branch, and create a pull request.
+This project is part of the Data Mining course and focuses on predicting customer churn for a telecommunications company. Customer churn, or customer attrition, refers to the phenomenon where customers stop doing business with a company. By accurately predicting which customers are at risk of churning, the company can take proactive measures to retain them.
 
-## 1. Set up your local repository
+## Objectives
 
-If you haven't already, clone the repository:
+1. Analyze the telco company's customer dataset to identify patterns and factors contributing to churn.
+2. Develop and compare multiple machine learning models to predict customer churn.
+3. Provide actionable insights to reduce customer churn based on the analysis and model results.
 
-```
-git clone [repository URL]
-cd [repository name]
-```
+## Dataset
 
-## 2. Create a new branch from main
+The project uses a dataset from a telecommunications company containing various customer attributes, including:
 
-Always start your work by creating a new branch from the latest version of `main`:
+- Customer demographics (age, gender, etc.)
+- Account information (contract type, payment method, etc.)
+- Services used (phone, internet, streaming, etc.)
+- Usage patterns
+- Churn status (target variable)
 
-```
-git checkout main
-git pull origin main
-git checkout -b your-branch-name
-```
+## Methodology
 
-Replace `your-branch-name` with a descriptive name for your feature or bugfix.
+1. Data Preprocessing:
+   - Handle missing values
+   - Encode categorical variables
+   - Feature scaling
 
-## 3. Make changes and commit
+2. Exploratory Data Analysis (EDA):
+   - Visualize relationships between features and churn
+   - Identify key factors influencing customer churn
 
-Make your changes to the codebase. When you're ready to commit:
+3. Feature Engineering:
+   - Create new features based on domain knowledge and EDA insights
 
-```
-git add .
-git commit -m "Your commit message"
-```
+4. Model Development:
+   - Split data into training and testing sets
+   - Implement and compare multiple algorithms, such as:
+     - Logistic Regression
+     - Random Forest
+     - Gradient Boosting
+     - Support Vector Machines
 
-Write a clear and concise commit message describing your changes.
+5. Model Evaluation:
+   - Use metrics like accuracy, precision, recall, and F1-score
+   - Perform cross-validation to ensure model robustness
 
-## 4. Push your branch to the remote repository
+6. Interpretation and Insights:
+   - Analyze feature importance
+   - Provide actionable recommendations based on model results
 
-```
-git push -u origin your-branch-name
-```
+## Getting Started
 
-## 5. Create a Pull Request
-
-1. Go to the repository page on GitHub (or your Git hosting platform).
-2. Click on "Pull requests" and then "New pull request".
-3. Set the base branch to `main` and the compare branch to `your-branch-name`.
-4. Add a title and description for your pull request.
-5. Click "Create pull request".
-
-## Best Practices
-
-- Keep your commits small and focused.
-- Write descriptive commit messages.
-- Update your branch regularly with changes from `main` using `git merge main` or `git rebase main`.
-- Respond promptly to review comments and make necessary changes.
+1. Clone this repository
+2. Install required packages: `pip install -r requirements.txt`
+3. Run Jupyter notebooks `project.ipynb` to see the analysis and modeling process
